@@ -17,6 +17,8 @@ import CachedContextProvider from "./utils/CacheContext.jsx";
 import Chat from "./Component/livechat/Chat.jsx";
 import { store } from "./utils/store/store.js";
 import Form from "./Component/Form/Form.jsx";
+import OtpForm from "./Component/Form/OtpForm.jsx";
+import User from "./Component/UserDatabasse/User.jsx";
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
 // import Login from "./Login";
@@ -97,6 +99,8 @@ function App() {
         { path: "acomplete", element: <AutoComplete /> },
         { path: "chat", element: <Chat /> },
         { path: "form", element: <Form /> },
+        { path: "otp", element: <OtpForm /> },
+        { path: "user", element: <User /> },
 
         {
           path: "page",
