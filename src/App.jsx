@@ -19,6 +19,9 @@ import { store } from "./utils/store/store.js";
 import Form from "./Component/Form/Form.jsx";
 import OtpForm from "./Component/Form/OtpForm.jsx";
 import User from "./Component/UserDatabasse/User.jsx";
+import FormExcel from "./Component/Form/FormExcel.jsx";
+import EmiCalculator from "./Component/Caclculator/EmiCalculator.jsx";
+import UseCallBack from "./Component/optimization/UseCallBack.jsx";
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
 // import Login from "./Login";
@@ -101,6 +104,9 @@ function App() {
         { path: "form", element: <Form /> },
         { path: "otp", element: <OtpForm /> },
         { path: "user", element: <User /> },
+        { path: "excel", element: <FormExcel /> },
+        { path: "emi", element: <EmiCalculator /> },
+        { path: "use", element: <UseCallBack /> },
 
         {
           path: "page",
