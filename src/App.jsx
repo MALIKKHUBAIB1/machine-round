@@ -24,6 +24,8 @@ import EmiCalculator from "./Component/Caclculator/EmiCalculator.jsx";
 import UseCallBack from "./Component/optimization/UseCallBack.jsx";
 import FileExplorer from "./Component/FileExplorer/FileExplorer.jsx";
 import AdvanceTodo from "./Component/UserDatabasse/AdvanceTodo.jsx";
+import TicketBookSystem from "./Component/Caclculator/TicketBookSystem.jsx";
+
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
 // import Login from "./Login";
@@ -112,6 +114,7 @@ function App() {
         { path: "progress", element: <ProgrressBar /> },
         { path: "file", element: <FileExplorer /> },
         { path: "atodo", element: <AdvanceTodo /> },
+        { path: "ticket", element: <TicketBookSystem /> },
 
         {
           path: "page",
