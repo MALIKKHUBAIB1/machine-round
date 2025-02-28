@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AuthProvider from "./utils/store/usercontext";
 // import TrafficLight from "./Component/TrafficLight";
-import ProgrressBar from "./Component/ProgrressBar";
+import ProgrressBar from "./Component/ProgressBar.jsx";
 import TicTac from "./Component/Storage/TicTac";
 import Page from "./Component/Page";
 import AutoComplete from "./Component/AutoComplete";
@@ -22,6 +22,8 @@ import User from "./Component/UserDatabasse/User.jsx";
 import FormExcel from "./Component/Form/FormExcel.jsx";
 import EmiCalculator from "./Component/Caclculator/EmiCalculator.jsx";
 import UseCallBack from "./Component/optimization/UseCallBack.jsx";
+import FileExplorer from "./Component/FileExplorer/FileExplorer.jsx";
+import AdvanceTodo from "./Component/UserDatabasse/AdvanceTodo.jsx";
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
 // import Login from "./Login";
@@ -95,7 +97,7 @@ function App() {
         { path: "cookie", element: <Cookies /> },
         { path: "todo", element: <FetchQuery /> },
         { path: "slider", element: <ImageSlider /> },
-        { path: "progress", element: <ProgrressBar /> },
+        // { path: "progress", element: <ProgrressBar /> },
         { path: "trafic", element: <TrafficLight /> },
         { path: "tictac", element: <TicTac /> },
         { path: "pagination", element: <Page /> },
@@ -107,6 +109,9 @@ function App() {
         { path: "excel", element: <FormExcel /> },
         { path: "emi", element: <EmiCalculator /> },
         { path: "use", element: <UseCallBack /> },
+        { path: "progress", element: <ProgrressBar /> },
+        { path: "file", element: <FileExplorer /> },
+        { path: "atodo", element: <AdvanceTodo /> },
 
         {
           path: "page",
