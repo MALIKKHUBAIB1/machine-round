@@ -32,16 +32,18 @@ function GenralSection({ setTotalTicket, totalTicket }) {
   const [bookedTicket, setBookedTicket] = useState(
     Array.from({ length: 6 }).map(() => Array(6).fill(false))
   );
-
   function handleBookedTicket(i, j) {
     const newBookeTicket = [...bookedTicket];
+
     newBookeTicket[i][j] = newBookeTicket[i][j] ? false : true;
+
     setBookedTicket(newBookeTicket);
     setTotalTicket((prev) => {
       return prev.map((data) => {
         if (data.category === "general") {
           return { ...data, count: data.count + 1 };
         }
+
         return data;
       });
     });
@@ -138,7 +140,7 @@ function TicketBookSystem() {
         className="w-40 p-3 border border-red-600 text-white"
         onClick={handleBooked}
       >
-        Booked it{" "}
+        Booked now
       </button>
       <GenralSection
         setTotalTicket={setTotalTicket}

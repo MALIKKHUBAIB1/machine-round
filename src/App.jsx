@@ -25,6 +25,8 @@ import UseCallBack from "./Component/optimization/UseCallBack.jsx";
 import FileExplorer from "./Component/FileExplorer/FileExplorer.jsx";
 import AdvanceTodo from "./Component/UserDatabasse/AdvanceTodo.jsx";
 import TicketBookSystem from "./Component/Caclculator/TicketBookSystem.jsx";
+import CommentSection from "./Component/CommentSection.jsx";
+import IndexDb from "./Component/Storage/IndexDb.jsx";
 
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
@@ -115,6 +117,8 @@ function App() {
         { path: "file", element: <FileExplorer /> },
         { path: "atodo", element: <AdvanceTodo /> },
         { path: "ticket", element: <TicketBookSystem /> },
+        { path: "comments", element: <CommentSection /> },
+        { path: "index", element: <IndexDb /> },
 
         {
           path: "page",
