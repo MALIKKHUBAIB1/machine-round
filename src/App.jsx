@@ -27,7 +27,8 @@ import AdvanceTodo from "./Component/UserDatabasse/AdvanceTodo.jsx";
 import TicketBookSystem from "./Component/Caclculator/TicketBookSystem.jsx";
 import CommentSection from "./Component/CommentSection.jsx";
 import IndexDb from "./Component/Storage/IndexDb.jsx";
-
+import CartProvider from "./utils/cart.jsx";
+import CartContext from "./Component/context/CartContext.jsx";
 const TrafficLight = lazy(() => import("./Component/TrafficLight"));
 
 // import Login from "./Login";
@@ -97,6 +98,8 @@ function App() {
       errorElement: <Error />,
       children: [
         { path: "/", element: <Todo /> },
+        { path: "cart", element: <CartContext /> },
+
         { path: "localstorage", element: <LocalStorage /> },
         { path: "cookie", element: <Cookies /> },
         { path: "todo", element: <FetchQuery /> },
@@ -132,13 +135,15 @@ function App() {
     },
     { path: "/login", element: <Login /> },
   ]);
+
   return (
     <Provider store={store}>
-      <CachedContextProvider>
-        <AuthProvider>
-          <RouterProvider router={router}>
-            {/* <div className="w-[100%]"> */}
-            {/* {accordionData.map((item) => {
+      <CartProvider>
+        <CachedContextProvider>
+          <AuthProvider>
+            <RouterProvider router={router}>
+              {/* <div className="w-[100%]"> */}
+              {/* {accordionData.map((item) => {
         return (
           <Accordian
             key={item.id}
@@ -149,10 +154,11 @@ function App() {
           />
         );
       })} */}
-            {/* </div> */}
-          </RouterProvider>
-        </AuthProvider>
-      </CachedContextProvider>
+              {/* </div> */}
+            </RouterProvider>
+          </AuthProvider>
+        </CachedContextProvider>
+      </CartProvider>
     </Provider>
   );
 }

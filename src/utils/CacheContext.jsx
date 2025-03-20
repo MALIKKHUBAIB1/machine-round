@@ -14,6 +14,7 @@ function CachedContextProvider({ children }) {
       [key]: [...(prev[key] || []), data],
     }));
   };
+  
   return (
     <CachedContext.Provider value={{ data, addData }}>
       {children}
